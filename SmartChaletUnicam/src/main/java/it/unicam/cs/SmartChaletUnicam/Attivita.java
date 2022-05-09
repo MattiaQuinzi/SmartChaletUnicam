@@ -58,4 +58,11 @@ public class Attivita {
     public void removeCliente(Integer ID) {
         this.listaClienti.remove(ID);
     }
+
+    @Override
+    public String toString(){
+        return "Nome: " + this.getNome()
+                + " - Descrizione: " + this.getDescrizione()
+                + " - Data: " + this.getData().toString();
+    }
 }

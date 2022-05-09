@@ -6,12 +6,14 @@ public class Ombrellone {
     private int numLettini;
     private int numSdraio;
     private int stato;
+    private double costo;
 
     public Ombrellone(int ID) {
         this.ID = ID;
         this.numLettini = 1;
         this.numSdraio = 1;
         this.stato = 0;
+        this.costo = 0;
     }
 
     public int getID() {
@@ -42,4 +44,19 @@ public class Ombrellone {
         this.stato = stato;
     }
 
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + this.getID() + " - Lettini: "
+                + this.getNumLettini() + " - Sdraio: "
+                + this.getNumSdraio() + " - Costo: "
+                + this.getCosto();
+    }
 }
