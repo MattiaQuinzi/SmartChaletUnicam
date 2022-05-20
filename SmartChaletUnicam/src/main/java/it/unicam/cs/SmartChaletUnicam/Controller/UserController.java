@@ -9,17 +9,16 @@ import java.util.regex.Pattern;
 public class UserController {
 
 
-    private static int ID;
+    private static int ID = 0;
     public ArrayList<Cliente> listaClienti ;
 
     public UserController(){
-        ID = 0; //togliere lo zero
         listaClienti = new ArrayList<>();
         //chiamata backend per prendere tutti i clienti
         //chiamata backend per l'ID
     }
 
-    public void newCliente() {
+    public void nuovoCliente() {
         String nome, cognome, mail;
         Scanner reader = new Scanner(System.in);
         System.out.println("nome");
@@ -47,5 +46,24 @@ public class UserController {
         } while(!matcher.matches());
 
         return mail;
+    }
+
+    public boolean loginUtente(){
+        String mail, password;
+        Scanner reader = new Scanner(System.in);
+        System.out.println("mail");
+        mail = reader.next();
+        System.out.println("password");
+        password = reader.next();
+
+        if(userExsist(mail, password)){
+            return true;
+        }
+        return false;
+    }
+
+    private boolean userExsist(String mail, String password) {
+        //controllo esistenza dati nel database
+        return true; // se esiste altrimenti return false
     }
 }

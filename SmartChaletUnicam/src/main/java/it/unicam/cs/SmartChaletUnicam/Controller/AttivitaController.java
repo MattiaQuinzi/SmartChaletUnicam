@@ -26,6 +26,24 @@ public class AttivitaController {
         attivita.setNome(reader.next());
         attivita.setDescrizione(reader.nextLine());
         //modifica data
-        //update attivita
+        //update attivita nel database
+    }
+
+    public void prenotazioneAttivita(){
+        int idAttivita, idUtente = 1;
+        Scanner reader = new Scanner(System.in);
+        this.visualizzaAttivita();
+        System.out.println("seleziona l'attivita");
+        idAttivita = reader.nextInt();
+        this.listaAttivita.get(this.getIndexOfAttivita(idAttivita))
+                .getListaClienti().add(idUtente);
+    }
+
+    private int getIndexOfAttivita(int id){
+        for(int i=0; i<this.listaAttivita.size(); i++){
+            if(this.listaAttivita.get(i).getID()==id)
+                return i;
+        }
+        return -1;
     }
 }

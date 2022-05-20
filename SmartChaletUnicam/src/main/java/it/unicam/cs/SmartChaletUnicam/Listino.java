@@ -30,4 +30,13 @@ public class Listino {
         }
     }
 
+    public void mostraProdotti(){
+        for(Prodotto prodotto: this.listaProdotti){
+            System.out.println(prodotto.toString());
+        }
+    }
+
+    public ArrayList<Prodotto> getListaProdotti() {
+        return listaProdotti;
+    }
 }
