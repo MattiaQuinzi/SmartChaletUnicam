@@ -71,7 +71,7 @@ public class SpiaggiaController {
         for(Ombrellone ombrellone: this.listaOmbrelloni){
             if(ombrellone.getID()>=primoOmbrellone
                     && ombrellone.getID()<=ultimoOmbrellone
-                        && ombrellone.getStato()==1){
+                        && (ombrellone.getStato() != null || ombrellone.getStato() != "")){
                 return false; //ombrellone occupato
             }
         }

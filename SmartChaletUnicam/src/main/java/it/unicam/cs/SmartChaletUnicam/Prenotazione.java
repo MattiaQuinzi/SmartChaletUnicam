@@ -5,19 +5,21 @@ import java.util.Date;
 
 public class Prenotazione {
 
-    private int ID;
+    private String ID;
+    private String idCliente;
     private Date dataInizio;
     private Date dataFine;
     private ArrayList<Ombrellone> listaOmbrelloni;
 
-    public Prenotazione(int ID, Date dataInizio, Date dataFine, ArrayList<Ombrellone> listaOmbrelloni) {
+    public Prenotazione(String ID, String idCliente, Date dataInizio, Date dataFine, ArrayList<Ombrellone> listaOmbrelloni) {
         this.ID = ID;
+        this.idCliente = idCliente;
         this.dataInizio = dataInizio;
         this.dataFine = dataFine;
         this.listaOmbrelloni = listaOmbrelloni;
     }
 
-    public int getID() {
+    public String getID() {
         return this.ID;
     }
 

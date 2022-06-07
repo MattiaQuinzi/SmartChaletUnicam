@@ -5,14 +5,14 @@ public class Ombrellone {
     private int ID;
     private int numLettini;
     private int numSdraio;
-    private int stato;
+    private String stato; //"" => libero, "unavailable" => non disponibile, "id di un cliente" => occupato da quel cliente
     private double costo;
 
     public Ombrellone(int ID) {
         this.ID = ID;
         this.numLettini = 1;
         this.numSdraio = 1;
-        this.stato = 0;
+        this.stato = "";
         this.costo = 0;
     }
 
@@ -28,7 +28,7 @@ public class Ombrellone {
         return this.numSdraio;
     }
 
-    public int getStato() {
+    public String getStato() {
         return stato;
     }
 
@@ -40,7 +40,7 @@ public class Ombrellone {
         this.numSdraio = numSdraio;
     }
 
-    public void setStato(int stato) {
+    public void setStato(String stato) {
         this.stato = stato;
     }
 

@@ -1,17 +1,15 @@
 package it.unicam.cs.SmartChaletUnicam;
 
 public class User {
-    private int ID;
+    private String ID;
     private String mail;
 
-    public User( int ID, String mail) {
+    public User(String ID, String mail) {
         this.ID=ID;
         this.mail = mail;
     }
 
-    public int getID() { return ID; }
-
-    public void setID(int ID) { this.ID = ID; }
+    public String getID() { return ID; }
 
     public String getMail() {
         return mail;

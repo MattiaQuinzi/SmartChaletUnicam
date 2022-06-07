@@ -2,17 +2,17 @@ package it.unicam.cs.SmartChaletUnicam;
 
 public class Prodotto {
 
-    private int ID;
+    private String ID;
     private String nome;
     private double prezzo;
 
-    public Prodotto(int ID, String nome, double prezzo) {
+    public Prodotto(String ID, String nome, double prezzo) {
         this.ID = ID;
         this.nome = nome;
         this.prezzo = prezzo;
     }
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
@@ -35,6 +35,6 @@ public class Prodotto {
     @Override
     public String toString(){
         return "Nome: " + this.nome +
-                "Prezzo: " + this.prezzo;
+                " Prezzo: " + this.prezzo;
     }
 }

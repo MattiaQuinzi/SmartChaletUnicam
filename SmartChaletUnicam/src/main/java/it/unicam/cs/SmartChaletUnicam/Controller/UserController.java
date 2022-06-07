@@ -8,8 +8,6 @@ import java.util.regex.Pattern;
 
 public class UserController {
 
-
-    private static int ID = 0;
     public ArrayList<Cliente> listaClienti ;
 
     public UserController(){
@@ -28,9 +26,11 @@ public class UserController {
         System.out.println("mail");
         mail = this.checkMail();
 
+        /*
         Cliente nuovoCliente = new Cliente(ID, mail, nome, cognome);
         listaClienti.add(nuovoCliente);
         ID++;
+        */
     }
 
     private String checkMail(){

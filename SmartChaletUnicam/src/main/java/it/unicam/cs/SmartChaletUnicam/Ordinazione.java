@@ -1,28 +1,48 @@
 package it.unicam.cs.SmartChaletUnicam;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Map;
 
 public class Ordinazione {
 
-    private int ID, ID_Ombrellone;
-    private LocalDateTime orario;
-    private Map<Integer, Integer> listaProdotti;
+    private String ID;
+    private int idOmbrellone;
+    private Date orario;
+    private Map<String, Integer> listaProdotti;
     private double prezzoTotale;
     private int stato; // 0-non 1-in elaborazione 2-finito
 
-    public Ordinazione(int ID, int ID_Ombrellone, LocalDateTime orario, Map<Integer, Integer> listaProdotti, double prezzoTotale) {
+    public Ordinazione(String ID, int idOmbrellone, Date orario, Map<String, Integer> listaProdotti, double prezzoTotale, int stato) {
         this.ID = ID;
-        this.ID_Ombrellone = ID_Ombrellone;
+        this.idOmbrellone = idOmbrellone;
         this.orario = orario;
         this.listaProdotti = listaProdotti;
-        this.prezzoTotale = 2;
-        this.stato = 0;
+        this.prezzoTotale = prezzoTotale;
+        this.stato = stato;
     }
 
-    private double calcolaPrezzo() {
-        double prezzo = 0;
-        return prezzo;
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public int getIdOmbrellone() {
+        return idOmbrellone;
+    }
+
+    public Date getOrario() {
+        return orario;
+    }
+
+    public double getPrezzoTotale() {
+        return prezzoTotale;
+    }
+
+    public void setPrezzoTotale(double prezzoTotale) {
+        this.prezzoTotale = prezzoTotale;
     }
 
     public void setStato(int stato) {
@@ -33,19 +53,15 @@ public class Ordinazione {
         return stato;
     }
 
-    public void setID_Ombrellone(int ID_Ombrellone) {
-        this.ID_Ombrellone = ID_Ombrellone;
-    }
-
-    public Map<Integer, Integer> getListaProdotti() {
+    public Map<String, Integer> getListaProdotti() {
         return listaProdotti;
     }
 
-    public void aggiungiProdotto(int idProdotto, int quantita){
+    public void aggiungiProdotto(String idProdotto, int quantita){
         this.listaProdotti.put(idProdotto, quantita);
     }
 
-    public void editProdotto(int id, int nuovaQuantita){
+    public void editProdotto(String id, int nuovaQuantita){
         if(this.listaProdotti.containsKey(id)){
             this.listaProdotti.replace(id,nuovaQuantita);
         }

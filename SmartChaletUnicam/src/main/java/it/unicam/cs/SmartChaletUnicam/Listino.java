@@ -6,33 +6,34 @@ public class Listino {
 
     private ArrayList<Prodotto> listaProdotti;
 
-    public Listino() {
-        this.listaProdotti = new ArrayList<>();
+    public Listino(ArrayList<Prodotto> listaProdotti) {
+        this.listaProdotti = listaProdotti;
     }
 
     public void addProdotto(Prodotto prodotto) {
         this.listaProdotti.add(prodotto);
     }
 
-    public Prodotto getProdotto(int ID) {
-        int index = 0;
+    public Prodotto getProdotto(String ID) {
         for(Prodotto prod : this.listaProdotti) {
-            if(prod.getID() == ID)
-                index = this.listaProdotti.indexOf(prod);
+            if(prod.getID().equals(ID))
+                return prod;
         }
-        return listaProdotti.get(index);
+        return null;
     }
 
-    public void removeProdotto(int ID) {
+    public void removeProdotto(String ID) {
         for(Prodotto prod : this.listaProdotti) {
-            if(prod.getID() == ID)
+            if(prod.getID().equals(ID))
                 this.listaProdotti.remove(prod);
         }
     }
 
     public void mostraProdotti(){
+        int i = 0;
         for(Prodotto prodotto: this.listaProdotti){
-            System.out.println(prodotto.toString());
+            System.out.println(i + ": " + prodotto.toString());
+            i++;
         }
     }
 

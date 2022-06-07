@@ -5,21 +5,21 @@ import java.util.Date;
 
 public class Attivita {
 
-    private int ID;
+    private String ID;
     private String nome;
     private String descrizione;
     private Date data;
-    private ArrayList<Integer> listaClienti;
+    private ArrayList<String> listaClienti;
 
-    public Attivita(int ID, String nome, String descrizione, Date data, ArrayList<Integer> listaClienti) {
+    public Attivita(String ID, String nome, String descrizione, Date data, ArrayList<String> listaClienti) {
         this.ID = ID;
         this.nome = nome;
         this.descrizione = descrizione;
         this.data = data;
-        this.listaClienti = new ArrayList<>();
+        this.listaClienti = listaClienti;
     }
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
@@ -35,7 +35,7 @@ public class Attivita {
         return data;
     }
 
-    public ArrayList<Integer> getListaClienti() {
+    public ArrayList<String> getListaClienti() {
         return listaClienti;
     }
 
@@ -51,11 +51,11 @@ public class Attivita {
         this.data = data;
     }
 
-    public void addCliente(Integer ID) {
+    public void addCliente(String ID) {
         this.listaClienti.add(ID);
     }
 
-    public void removeCliente(Integer ID) {
+    public void removeCliente(String ID) {
         this.listaClienti.remove(ID);
     }
 
@@ -63,6 +63,7 @@ public class Attivita {
     public String toString(){
         return "Nome: " + this.getNome()
                 + " - Descrizione: " + this.getDescrizione()
-                + " - Data: " + this.getData().toString();
+                + " - Data: " + this.getData().toString()
+                + " - Clienti: " + this.listaClienti.toString();
     }
 }

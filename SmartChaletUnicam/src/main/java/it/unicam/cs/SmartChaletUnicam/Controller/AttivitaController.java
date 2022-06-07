@@ -1,17 +1,19 @@
 package it.unicam.cs.SmartChaletUnicam.Controller;
 
 import it.unicam.cs.SmartChaletUnicam.Attivita;
+import it.unicam.cs.SmartChaletUnicam.db.MongoDB;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AttivitaController {
 
-    private final ArrayList<Attivita> listaAttivita;
+    private ArrayList<Attivita> listaAttivita;
+    private MongoDB mongo;
 
     public AttivitaController() {
-        this.listaAttivita = new ArrayList<>();
-        //chiamata backend per setting di attivita'
+        mongo = new MongoDB();
+        this.listaAttivita = this.mongo.dbGetAllAttivita();
     }
 
     public void visualizzaAttivita(){
@@ -20,30 +22,35 @@ public class AttivitaController {
         }
     }
 
-    public void modificaAttivita(int ID){
+    public void modificaAttivita(String ID){
         Scanner reader = new Scanner(System.in);
-        Attivita attivita = listaAttivita.get(ID+1);
-        attivita.setNome(reader.next());
-        attivita.setDescrizione(reader.nextLine());
-        //modifica data
-        //update attivita nel database
+        for(Attivita attivita : this.listaAttivita) {
+            if(attivita.getID().equals(ID)) {
+                String nome = reader.nextLine();
+                String descrizione = reader.next();
+                attivita.setNome(nome);
+                attivita.setDescrizione(descrizione);
+                this.mongo.dbSetAttivita(attivita);
+            }
+        }
     }
 
-    public void prenotazioneAttivita(){
-        int idAttivita, idUtente = 1;
-        Scanner reader = new Scanner(System.in);
-        this.visualizzaAttivita();
-        System.out.println("seleziona l'attivita");
-        idAttivita = reader.nextInt();
-        this.listaAttivita.get(this.getIndexOfAttivita(idAttivita))
-                .getListaClienti().add(idUtente);
+    public void prenotazioneAttivita(String idCliente, String idAttivita){
+        for(Attivita attivita : this.listaAttivita) {
+            if(attivita.getID().equals(idAttivita)) {
+                attivita.getListaClienti().add(idCliente);
+                this.mongo.dbSetAttivita(attivita);
+            }
+        }
     }
 
-    private int getIndexOfAttivita(int id){
+    /*
+    private int getIndexOfAttivita(String id){
         for(int i=0; i<this.listaAttivita.size(); i++){
-            if(this.listaAttivita.get(i).getID()==id)
+            if(this.listaAttivita.get(i).getID().equals(id))
                 return i;
         }
         return -1;
     }
+     */
 }
