@@ -5,12 +5,10 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.MongoClient;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
-import it.unicam.cs.SmartChaletUnicam.Attivita;
-import it.unicam.cs.SmartChaletUnicam.Listino;
-import it.unicam.cs.SmartChaletUnicam.Ordinazione;
-import it.unicam.cs.SmartChaletUnicam.Prodotto;
+import it.unicam.cs.SmartChaletUnicam.*;
 import org.bson.Document;
 import org.bson.types.ObjectId;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -108,6 +106,35 @@ public class MongoDB {
         }
         Listino listino = new Listino(listaProdotti);
         return listino;
+    }
+
+    public String dbNuovoCliente(Cliente cliente, String password) {
+        MongoCollection<Document> collection = this.database.getCollection("user");
+        Document document = new Document("mail", cliente.getMail())
+                .append("ruolo", 2)
+                        .append("nome", cliente.getNome())
+                                .append("cognome", cliente.getCognome())
+                                        .append("password", BCrypt.hashpw(password, BCrypt.gensalt()));
+        collection.insertOne(document);
+        return document.getObjectId("_id").toString();
+    }
+
+    public String dbLoginUser(String mail, String password) {
+        String id = "";
+        MongoCollection<Document> collection = this.database.getCollection("user");
+        for(Document doc : collection.find(Filters.eq("mail", mail))) {
+            if(BCrypt.checkpw(password, doc.getString("password"))) {
+                id = doc.getObjectId("_id").toString();
+            }
+        }
+        return id;
+    }
+
+    public boolean dbAlreadyExist(String mail) {
+        MongoCollection<Document> collection = this.database.getCollection("user");
+        if(collection.countDocuments(Filters.eq("mail", mail)) == 0)
+            return false;
+        else return true;
     }
 
     /*

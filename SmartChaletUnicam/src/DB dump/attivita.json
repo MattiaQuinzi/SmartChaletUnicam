@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "628b85dba5c17615bc2f4d12"
+  },
+  "nome": "Torneo di Beach Volley",
+  "descrizione": "Il torneo si svolgerà nel campo vicino al bar dello chalet",
+  "data": {
+    "$date": {
+      "$numberLong": "1661691600000"
+    }
+  },
+  "listaClienti": [
+    "62a74c14692460405869d52c"
+  ]
+},{
+  "_id": {
+    "$oid": "628b875da5c17615bc2f4d1a"
+  },
+  "nome": "ce semooooooo",
+  "descrizione": "owowowowowoow",
+  "data": {
+    "$date": {
+      "$numberLong": "1660145400000"
+    }
+  },
+  "listaClienti": []
+}]

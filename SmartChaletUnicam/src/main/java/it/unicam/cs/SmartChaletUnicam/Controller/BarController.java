@@ -36,7 +36,7 @@ public class BarController {
         }
     }
 
-    public void accettazioneOrdinazione(int ID){
+    public void accettaOrdinazione(String ID){
         for(Ordinazione ordinazione : this.listaOrdinazioni) {
             if(ordinazione.getID().equals(ID)) {
                 ordinazione.setStato(1);

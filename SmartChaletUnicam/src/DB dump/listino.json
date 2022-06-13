@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "628b8774a5c17615bc2f4d1d"
+  },
+  "nome": "Pacchetto di Patatine",
+  "prezzo": 1.5
+},{
+  "_id": {
+    "$oid": "628b880ba5c17615bc2f4d1e"
+  },
+  "nome": "Tramezzino Prosciutto e Mozzarella",
+  "prezzo": 3
+},{
+  "_id": {
+    "$oid": "628b8843a5c17615bc2f4d1f"
+  },
+  "nome": "Caffè Espresso",
+  "prezzo": 1
+},{
+  "_id": {
+    "$oid": "628b88f4a5c17615bc2f4d20"
+  },
+  "nome": "Spaghetti al Pomodoro",
+  "prezzo": 5
+},{
+  "_id": {
+    "$oid": "628b8917a5c17615bc2f4d21"
+  },
+  "nome": "Bottiglia Acqua Naturale 500ml",
+  "prezzo": 1
+},{
+  "_id": {
+    "$oid": "628b8932a5c17615bc2f4d22"
+  },
+  "nome": "Cola 33cl",
+  "prezzo": 1.5
+},{
+  "_id": {
+    "$oid": "628b8955a5c17615bc2f4d23"
+  },
+  "nome": "Cornetto alla Crema",
+  "prezzo": 1
+}]

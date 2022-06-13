@@ -11,6 +11,10 @@ public class User {
 
     public String getID() { return ID; }
 
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
     public String getMail() {
         return mail;
     }

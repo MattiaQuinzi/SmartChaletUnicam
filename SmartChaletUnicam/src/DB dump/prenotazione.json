@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "628eb167da607c4ad3f13200"
+  },
+  "idCliente": "62a74c14692460405869d52c",
+  "dataInizio": {
+    "$date": {
+      "$numberLong": "1661418000000"
+    }
+  },
+  "dataFine": {
+    "$date": {
+      "$numberLong": "1661889600000"
+    }
+  },
+  "listaOmbrelloni": [
+    4,
+    5
+  ]
+},{
+  "_id": {
+    "$oid": "628eb2b4da607c4ad3f13205"
+  },
+  "idCliente": "62a74e104702006f3684b472",
+  "dataInizio": {
+    "$date": {
+      "$numberLong": "1661590800000"
+    }
+  },
+  "dataFine": {
+    "$date": {
+      "$numberLong": "1661803200000"
+    }
+  },
+  "listaOmbrelloni": [
+    8
+  ]
+},{
+  "_id": {
+    "$oid": "628eb308da607c4ad3f13206"
+  },
+  "idCliente": "62a74c907e3b3c0166d7b6a7",
+  "dataInizio": {
+    "$date": {
+      "$numberLong": "1661677200000"
+    }
+  },
+  "dataFine": {
+    "$date": {
+      "$numberLong": "1661716800000"
+    }
+  },
+  "listaOmbrelloni": [
+    12,
+    13,
+    14
+  ]
+}]
