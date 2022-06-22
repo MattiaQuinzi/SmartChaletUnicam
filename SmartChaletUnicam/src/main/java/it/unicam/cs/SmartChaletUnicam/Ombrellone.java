@@ -8,12 +8,12 @@ public class Ombrellone {
     private String stato; //"" => libero, "unavailable" => non disponibile, "id di un cliente" => occupato da quel cliente
     private double costo;
 
-    public Ombrellone(int ID) {
+    public Ombrellone(int ID, int numLettini, int numSdraio, String stato, double costo) {
         this.ID = ID;
-        this.numLettini = 1;
-        this.numSdraio = 1;
-        this.stato = "";
-        this.costo = 0;
+        this.numLettini = numLettini;
+        this.numSdraio = numSdraio;
+        this.stato = stato;
+        this.costo = costo;
     }
 
     public int getID() {

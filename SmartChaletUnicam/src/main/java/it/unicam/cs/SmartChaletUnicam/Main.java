@@ -2,6 +2,7 @@ package it.unicam.cs.SmartChaletUnicam;
 
 import it.unicam.cs.SmartChaletUnicam.Controller.AttivitaController;
 import it.unicam.cs.SmartChaletUnicam.Controller.BarController;
+import it.unicam.cs.SmartChaletUnicam.Controller.SpiaggiaController;
 import it.unicam.cs.SmartChaletUnicam.Controller.UserController;
 
 public class Main {
@@ -17,8 +18,9 @@ public class Main {
         barContr.nuovaOrdinazione(7);
         barContr.stampaOrdinazioni();
          */
-        UserController userController = new UserController();
-        userController.loginUtente();
+        //UserController userController = new UserController();
+        //userController.loginUtente();
         //userController.nuovoCliente();
+        SpiaggiaController spiaggiaController = new SpiaggiaController();
     }
 }

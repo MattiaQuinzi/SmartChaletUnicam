@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "62af3011d8ab2f99f5c1d211"
+  },
+  "prezzoOmbrellone": 10,
+  "prezzoLettino": 4,
+  "prezzoSdraio": 2,
+  "lettiniDisponibili": 40,
+  "sdraioDisponibili": 40
+}]

@@ -2,180 +2,180 @@
   "_id": {
     "$oid": "628eaf28da607c4ad3f131d9"
   },
-  "idOmbrellone": "1",
+  "idOmbrellone": 1,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eafc5da607c4ad3f131da"
   },
-  "idOmbrellone": "2",
+  "idOmbrellone": 2,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eafceda607c4ad3f131db"
   },
-  "idOmbrellone": "3",
+  "idOmbrellone": 3,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eafd5da607c4ad3f131dc"
   },
-  "idOmbrellone": "4",
+  "idOmbrellone": 4,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eafe6da607c4ad3f131de"
   },
-  "idOmbrellone": "5",
+  "idOmbrellone": 5,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eafedda607c4ad3f131df"
   },
-  "idOmbrellone": "6",
+  "idOmbrellone": 6,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eaff4da607c4ad3f131e0"
   },
-  "idOmbrellone": "7",
+  "idOmbrellone": 7,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eaffbda607c4ad3f131e1"
   },
-  "idOmbrellone": "8",
+  "idOmbrellone": 8,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb005da607c4ad3f131e2"
   },
-  "idOmbrellone": "9",
+  "idOmbrellone": 9,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb00bda607c4ad3f131e3"
   },
-  "idOmbrellone": "10",
+  "idOmbrellone": 10,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb010da607c4ad3f131e4"
   },
-  "idOmbrellone": "11",
+  "idOmbrellone": 11,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb016da607c4ad3f131e5"
   },
-  "idOmbrellone": "12",
+  "idOmbrellone": 12,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb01dda607c4ad3f131e6"
   },
-  "idOmbrellone": "13",
+  "idOmbrellone": 13,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb036da607c4ad3f131e7"
   },
-  "idOmbrellone": "14",
+  "idOmbrellone": 14,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb03eda607c4ad3f131e8"
   },
-  "idOmbrellone": "15",
+  "idOmbrellone": 15,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb044da607c4ad3f131e9"
   },
-  "idOmbrellone": "16",
+  "idOmbrellone": 16,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb04bda607c4ad3f131ea"
   },
-  "idOmbrellone": "17",
+  "idOmbrellone": 17,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb051da607c4ad3f131eb"
   },
-  "idOmbrellone": "18",
+  "idOmbrellone": 18,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb057da607c4ad3f131ec"
   },
-  "idOmbrellone": "19",
+  "idOmbrellone": 19,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 },{
   "_id": {
     "$oid": "628eb05eda607c4ad3f131ed"
   },
-  "idOmbrellone": "20",
+  "idOmbrellone": 20,
   "numLettini": 1,
   "numSdraio": 1,
   "stato": "",
-  "costo": 0
+  "costo": 10
 }]

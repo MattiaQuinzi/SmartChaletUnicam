@@ -9,9 +9,9 @@ public class Prenotazione {
     private String idCliente;
     private Date dataInizio;
     private Date dataFine;
-    private ArrayList<Ombrellone> listaOmbrelloni;
+    private ArrayList<Integer> listaOmbrelloni;
 
-    public Prenotazione(String ID, String idCliente, Date dataInizio, Date dataFine, ArrayList<Ombrellone> listaOmbrelloni) {
+    public Prenotazione(String ID, String idCliente, Date dataInizio, Date dataFine, ArrayList<Integer> listaOmbrelloni) {
         this.ID = ID;
         this.idCliente = idCliente;
         this.dataInizio = dataInizio;
@@ -21,6 +21,10 @@ public class Prenotazione {
 
     public String getID() {
         return this.ID;
+    }
+
+    public String getIdCliente() {
+        return this.idCliente;
     }
 
     public Date getInizio() {
@@ -39,19 +43,26 @@ public class Prenotazione {
         this.dataFine = dataFine;
     }
 
-    public ArrayList<Ombrellone> getOmbrelloni() {
+    public ArrayList<Integer> getOmbrelloni() {
         return this.listaOmbrelloni;
     }
 
-    public void addOmbrellone(Ombrellone ombrellone) {
-        this.listaOmbrelloni.add(ombrellone);
+    public void addOmbrellone(int idOmbrellone) {
+        this.listaOmbrelloni.add(idOmbrellone);
     }
 
     public void removeOmbrellone(int ID) {
-        for(Ombrellone omb: this.listaOmbrelloni) {
-            if(omb.getID() == ID)
-                this.listaOmbrelloni.remove(omb);
+        for(int idOmbrellone: this.listaOmbrelloni) {
+            if(idOmbrellone == ID)
+                this.listaOmbrelloni.remove(idOmbrellone);
         }
+    }
+
+    public String toString() {
+        return "idCliente: " + this.idCliente + " - dataInizio: "
+                + this.dataInizio.toString() + " - dataFine: "
+                + this.dataFine.toString() + " - listaOmbrelloni: "
+                + this.listaOmbrelloni.toString();
     }
 
 }

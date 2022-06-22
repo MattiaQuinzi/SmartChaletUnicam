@@ -137,6 +137,53 @@ public class MongoDB {
         else return true;
     }
 
+    public ArrayList<Double> dbGetValoriSpiaggia() {
+        ArrayList<Double> valoriSpiaggia = new ArrayList<>();
+        MongoCollection<Document> collection = this.database.getCollection("gestioneSpiaggia");
+        for(Document doc : collection.find()) {
+            valoriSpiaggia.add(doc.getDouble("prezzoOmbrellone"));
+            valoriSpiaggia.add(doc.getDouble("prezzoLettino"));
+            valoriSpiaggia.add(doc.getDouble("prezzoSdraio"));
+            valoriSpiaggia.add(Double.valueOf(doc.getInteger("lettiniDisponibili")));
+            valoriSpiaggia.add(Double.valueOf(doc.getInteger("sdraioDisponibili")));
+        }
+        return valoriSpiaggia;
+    }
+
+    public ArrayList<Ombrellone> dbGetListaOmbrelloni() {
+        ArrayList<Ombrellone> listaOmbrelloni = new ArrayList<>();
+        MongoCollection<Document> collection = this.database.getCollection("ombrellone");
+        for(Document doc : collection.find()) {
+            Ombrellone ombrellone = new Ombrellone(doc.getInteger("idOmbrellone"),
+                    doc.getInteger("numLettini"),
+                    doc.getInteger("numSdraio"),
+                    doc.getString("stato"),
+                    doc.getDouble("costo"));
+            listaOmbrelloni.add(ombrellone);
+        }
+        return listaOmbrelloni;
+    }
+
+    public ArrayList<Prenotazione> dbGetListaPrenotazioni() {
+        ArrayList<Prenotazione> listaPrenotaioni = new ArrayList<>();
+        MongoCollection<Document> collection = this.database.getCollection("prenotazione");
+        for(Document doc : collection.find()) {
+            ArrayList<Integer> listaID = new ArrayList<>();
+            for(int id: (ArrayList<Integer>)doc.get("listaOmbrelloni")) {
+                listaID.add(id);
+            }
+            Prenotazione prenotazione = new Prenotazione(doc.getObjectId("_id").toString(),
+                    doc.getString("idCliente"),
+                    doc.getDate("dataInizio"),
+                    doc.getDate("dataFine"),
+                    listaID);
+            listaPrenotaioni.add(prenotazione);
+        }
+        return listaPrenotaioni;
+    }
+
+
+
     /*
     public void dbAggiungiClienteAttivita(Attivita attivita, String idCliente) {
         MongoCollection<Document> collection = this.database.getCollection("attivita");

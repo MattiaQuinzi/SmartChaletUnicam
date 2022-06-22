@@ -2,6 +2,7 @@ package it.unicam.cs.SmartChaletUnicam.Controller;
 
 import it.unicam.cs.SmartChaletUnicam.Ombrellone;
 import it.unicam.cs.SmartChaletUnicam.Prenotazione;
+import it.unicam.cs.SmartChaletUnicam.db.MongoDB;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,14 +11,20 @@ import java.util.Scanner;
 public class SpiaggiaController {
     private ArrayList<Ombrellone> listaOmbrelloni;
     private ArrayList<Prenotazione> listaPrenotazioni;
-    private int lettiniDisponibili, sdraioDisponibili; //nel magazzino
+    private int lettiniDisponibili, sdraioDisponibili;
     private double prezzoLettino, prezzoSdraio, prezzoOmbrellone;
-    private static int idPrenotazione = 0;
+    private MongoDB mongo;
 
     public SpiaggiaController(){
-        this.listaOmbrelloni = new ArrayList<>();
-        // chiamata al database per ombrelloni
-        // chiamata al database per sdraio e lettini
+        this.mongo = new MongoDB();
+        ArrayList<Double> valoriSpiaggia = this.mongo.dbGetValoriSpiaggia();
+        this.listaOmbrelloni = this.mongo.dbGetListaOmbrelloni();
+        this.listaPrenotazioni = this.mongo.dbGetListaPrenotazioni();
+        this.prezzoOmbrellone = valoriSpiaggia.get(0);
+        this.prezzoLettino = valoriSpiaggia.get(1);
+        this.prezzoSdraio = valoriSpiaggia.get(2);
+        this.lettiniDisponibili = valoriSpiaggia.get(3).intValue();
+        this.sdraioDisponibili = valoriSpiaggia.get(4).intValue();
     }
 
     public void modificaOmbrellone(int ID){
