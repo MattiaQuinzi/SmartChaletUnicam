@@ -21,7 +21,7 @@ public class ControllerBar {
     }
 
     @GetMapping("/getprodotto")
-    public Prodotto getProdotto(Prodotto prodotto) {
+    public Prodotto getProdotto(@RequestBody Prodotto prodotto) {
         return serviceBar.getProdotto(prodotto);
     }
 
